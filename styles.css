@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-body.content{
+
+/*#region Title Bar Styles*/
+div.titleContent{
   padding-right: 15%;
   padding-left: 15%;
 }
@@ -24,6 +26,37 @@ div.myMenuBar{
   position: sticky;
   top: 0px;
 }
+/*#endregion*/
+
+/*#region Main Content Styles*/
+div.mainContent{
+  margin-left: 16%;
+  padding-right: 15%;
+}
+
+div.sideNav{
+  width: 12%;
+  position: fixed;
+  top: 200px;
+  left: 2%;
+  background-color: #333333;
+  overflow-wrap: normal;
+  padding: 5px;
+}
+
+div.sideNav a{
+  padding: 5px 5px 5px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #dddddd;
+  display: block;
+}
+
+div.sideNav a:hover{
+  color: #ffffff;
+}
+/*#endregion*/
+
 #cssmenu,
 #cssmenu ul,
 #cssmenu ul li,
@@ -209,12 +242,18 @@ div.myMenuBar{
 
 @media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   
-  /*.content {padding-right: 0%};
-  .content {padding-left: 0%};*/
-
-  body.content{
+  div.titleContent{
     padding-right: 0%;
     padding-left: 0%;  
+  }
+
+  div.mainContent{
+    padding-right: 0%;
+    margin-left: 0%;  
+  }
+
+  div.sideNav{
+    visibility: collapse;
   }
 
   #cssmenu {
