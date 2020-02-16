@@ -1,4 +1,29 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+body.content{
+  padding-right: 15%;
+  padding-left: 15%;
+}
+
+div.titleBar{
+  color: #dddddd;
+  text-align: center;
+  background-color: #333333;
+  border-bottom: 10px solid #141414;
+  padding: 50px;
+  padding-bottom: 35px;
+  font-size: 300%;
+}
+
+div.titleDivider{
+  height: 5px;
+  background-color: #141414;
+}
+
+div.myMenuBar{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
 #cssmenu,
 #cssmenu ul,
 #cssmenu ul li,
@@ -181,27 +206,6 @@
   height: 0;
 }
 
-body.content{
-  padding-right: 15%;
-  padding-left: 15%;
-}
-
-div.titleBar{
-  color: #dddddd;
-  text-align: center;
-  background-color: #333333;
-  border-bottom: 15px solid #141414;
-  padding: 50px;
-  padding-bottom: 35px;
-  font-size: 300%;
-
-}
-
-div.myMenuBar{
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-}
 
 @media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   
