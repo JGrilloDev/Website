@@ -1,7 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-/*#region Title Bar Styles*/
-div.titleContent{
+body.content{
   padding-right: 15%;
   padding-left: 15%;
 }
@@ -26,13 +25,6 @@ div.myMenuBar{
   position: sticky;
   top: 0px;
 }
-/*#endregion*/
-
-/*#region Main Content Styles*/
-div.mainContent{
-  margin-left: 16%;
-  padding-right: 15%;
-}
 
 div.sideNav{
   width: 12%;
@@ -55,7 +47,6 @@ div.sideNav a{
 div.sideNav a:hover{
   color: #ffffff;
 }
-/*#endregion*/
 
 #cssmenu,
 #cssmenu ul,
@@ -242,18 +233,12 @@ div.sideNav a:hover{
 
 @media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   
-  div.titleContent{
+  /*.content {padding-right: 0%};
+  .content {padding-left: 0%};*/
+
+  body.content{
     padding-right: 0%;
     padding-left: 0%;  
-  }
-
-  div.mainContent{
-    padding-right: 0%;
-    margin-left: 0%;  
-  }
-
-  div.sideNav{
-    visibility: collapse;
   }
 
   #cssmenu {
