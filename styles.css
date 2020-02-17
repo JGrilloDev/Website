@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 body.content{
   padding-right: 15%;
   padding-left: 15%;
@@ -24,6 +25,29 @@ div.myMenuBar{
   position: sticky;
   top: 0px;
 }
+
+div.sideNav{
+  width: 12%;
+  position: fixed;
+  top: 200px;
+  left: 2%;
+  background-color: #333333;
+  overflow-wrap: normal;
+  padding: 5px;
+}
+
+div.sideNav a{
+  padding: 5px 5px 5px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #dddddd;
+  display: block;
+}
+
+div.sideNav a:hover{
+  color: #ffffff;
+}
+
 #cssmenu,
 #cssmenu ul,
 #cssmenu ul li,
