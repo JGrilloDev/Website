@@ -1,18 +1,29 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+html{
+  scroll-behavior: smooth;
+}
+
 body.content{
   padding-right: 15%;
   padding-left: 15%;
+  background: linear-gradient(0, #999999 0%, #cccccc 100%);
 }
 
 div.titleBar{
   color: #dddddd;
   text-align: center;
   background-color: #333333;
-  border-bottom: 10px solid #141414;
+  border: 3px solid #141414;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
   padding: 50px;
   padding-bottom: 35px;
   font-size: 300%;
+}
+
+div.big{
+  font-size: 300;
 }
 
 div.titleDivider{
@@ -24,16 +35,20 @@ div.myMenuBar{
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
+  border-left: 3px solid #141414;
+  border-right: 3px solid #141414;
 }
 
 div.sideNav{
-  width: 12%;
+  width: 11%;
   position: fixed;
   top: 200px;
   left: 2%;
   background-color: #333333;
   overflow-wrap: normal;
   padding: 5px;
+  border:  5px solid #141414;
+  border-radius: 7px;
 }
 
 div.sideNav a{
@@ -42,10 +57,18 @@ div.sideNav a{
   font-size: 25px;
   color: #dddddd;
   display: block;
+  overflow-wrap: normal;
+}
+
+div.sideNav p{
+  border-top: 2px solid #141414;
+  padding: 0px;
+  margin: 0px;
 }
 
 div.sideNav a:hover{
   color: #ffffff;
+  background-color: #444444;
 }
 
 #cssmenu,
@@ -108,6 +131,7 @@ div.sideNav a:hover{
 }
 #cssmenu > ul > li:hover > a {
   color: #ffffff;
+  background-color: #444444;
 }
 #cssmenu > ul > li.has-sub > a {
   padding-right: 30px;
@@ -191,6 +215,8 @@ div.sideNav a:hover{
 #cssmenu ul ul li:hover > a,
 #cssmenu ul ul li a:hover {
   color: #ffffff;
+  background-color: #444444;
+
 }
 #cssmenu ul ul li.has-sub > a:after {
   position: absolute;
@@ -236,6 +262,10 @@ div.sideNav a:hover{
   /*.content {padding-right: 0%};
   .content {padding-left: 0%};*/
 
+  div.sideNav{
+    visibility: hidden;
+  }
+
   body.content{
     padding-right: 0%;
     padding-left: 0%;  
@@ -280,6 +310,7 @@ div.sideNav a:hover{
   #cssmenu ul ul li:hover > a,
   #cssmenu ul ul li.active > a {
     color: #ffffff;
+    background-color: aquamarine;
   }
   #cssmenu ul ul,
   #cssmenu ul ul ul,
