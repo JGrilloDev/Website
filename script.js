@@ -61,12 +61,10 @@
 })(jQuery);
 
 (function($){
-$(document).ready(function(){
-
-$("#cssmenu").menumaker({
-   title: "Menu",
-   format: "multitoggle"
-});
-
-});
+  $(document).ready(function(){
+    $("#cssmenu").menumaker({
+      title: "Menu",
+      format: "multitoggle"
+    });
+  });
 })(jQuery);

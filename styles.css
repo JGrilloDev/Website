@@ -8,6 +8,7 @@ body.content{
   padding-right: 15%;
   padding-left: 15%;
   background: linear-gradient(0, #555555 0%, #cccccc 20%);
+  background-repeat: no-repeat;
 }
 
 div.titleBar{
@@ -15,6 +16,7 @@ div.titleBar{
   text-align: center;
   background-color: #333333;
   border: 3px solid #141414;
+  border-bottom: 5px solid #141414;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   padding: 50px;
@@ -57,7 +59,8 @@ div.sideNav a{
   font-size: 25px;
   color: #dddddd;
   display: block;
-  overflow-wrap: normal;
+  overflow-wrap: break-word;
+  text-align: center;
 }
 
 div.sideNav p{
@@ -310,7 +313,7 @@ div.sideNav a:hover{
   #cssmenu ul ul li:hover > a,
   #cssmenu ul ul li.active > a {
     color: #ffffff;
-    background-color: aquamarine;
+    background-color:#444444;
   }
   #cssmenu ul ul,
   #cssmenu ul ul ul,
