@@ -74,6 +74,10 @@ div.sideNav a:hover{
   background-color: #444444;
 }
 
+div.spacer{
+  padding-top: 30px;
+}
+
 #cssmenu,
 #cssmenu ul,
 #cssmenu ul li,
