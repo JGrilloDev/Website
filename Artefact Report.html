@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="script.js"></script>
+   <title>Josh Grillo Dev Site</title>
+</head>
+<body class="content">
+ <!--#region Template Basics  -->
+
+<!-- Big title block-->
+<div class="titleBar">Is Jonch</div> 
+
+<!-- Nav Bar, need to get this into its own thing-->
+<div class='myMenuBar'>
+<div id='cssmenu'>
+<ul>
+   <li><a href='index.html'>Portfolio</a>
+      <ul>
+         <li><a href='#'>Thing 1</a>
+            <ul>
+               <li><a href='#'>Specific Thing 1</a></li>
+               <li><a href='#'>Specific Thing 2</a></li>
+            </ul>
+         </li>
+         <li><a href='#'>Thing 2</a>
+            <ul>
+               <li><a href='#'>Specific Thing 1</a></li>
+               <li><a href='#'>Specific Thing 2</a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li><a href='Artefact Report.html'>Artefact Report</a></li>
+   <li><a href='#'>Blog (?)</a></li>
+   <li><a href='#'>Contact</a></li>
+</ul>
+</div>
+<div class="horizontalDivider"></div>
+</div>
+
+<!-- #endregion -->
+
+<div class="spacer"></div>
+<div class="entry">
+<h1>Data Communication between Client and Server</h1>
+<h2>The Choice Between JSON and Plaintext</h2>
+<p>
+   When creating an Application that communicates with external sources, you have to 
+   consider how it will communicate with them. The two ways I have encountered client
+   server communication over sockets are by sending messages as a single string, or 
+   by sending a dictionary using JSON. I wish to investigate both these options to find
+   out which would be better for my Multi User Dungeon.
+</p>
+<h2>Testing Platform</h2>
+<img src="Portfolio/Artefact Report/State Machine.png" class="right" title="Simple State Machine for MUD server">
+<p>
+   To test which of the two options is better, I will be creating a lightweight client
+   that will interact with my MUD server, and I will slightly modify the server to handle
+   requests from this client. I will be modifying the Check Request State to recognise
+   the test requests from the lightweight client as valid responses, and the have them
+   handled appropriately. </br></br>
+   The testing client will be sending a single piece of information to the server and 
+   will get 2 pieces of information back in response. The message sent will be the string
+   "Arbitrary Message", and the information recieved will be the time at which the server
+   has recieved and processed the information, and the size of the message the server 
+   recieved from the client. </br></br>
+   For the String test, this information will be concatenated
+   and then sent, and for the JSON test, these bits of information will be under the 
+   tags "msg", "time" and "size"
+</p>
+<h2>Results</h2>
+<img src="Portfolio/Artefact Report/box-plot.png" class="right" title="Time taken to receive response. String Left, JSON Right">
+<p>
+   For testing both the String and JSON, I was recording multiple values. 
+   <ul> 
+      <li>Time the message was sent from the client, </li>
+      <li>Time the message was recieved from the server, </li>
+      <li>Time the response was recieved by the client, </li>
+      <li>Size of the message, </li>
+      <li>Size of the response. </li>
+   </ul>
+</p>
+<p>
+   The box plot on the right shows the spread of time taken to recieve a response after
+   the client sends the inital message. The box plot shows that (after removing some
+   outliers) that while the Json has a lower mean, it also has a greater variance,
+   although more testing would be necessary to confirm this isnt just due to an 
+   unstable network. </br> </br>
+   As for the size of the data packets, the size the Json packets were noticebly larger.
+   For the outgoing messages, the string was only 17 bytes, compared to JSON which was at
+   28 bytes. For the responses, the String was a small 9 bytes, where JSON remained at 
+   28 bytes.
+</p>
+<h2>Comparison and Conclusion</h2>
+<p>
+   From the data presented, it seems that using Strings are an obvious choice, but 
+   the situation in these methods were tested against each other was a rather simple one.
+   The use of Strings sending data relies on the data being sent in a specific order,
+   which can become a problem when sending multiple pieces of information. This is 
+   specifically the upside of using JSON; the ease of use of the dictionary provides 
+   many benefits. </br> </br>
+   In the case of my Multi User Dungeon, I will continue using Strings for 
+   communications, as the data that is being sent is rather simple, only being
+   one command at a time. The commands are also typed into a text box and sent, so 
+   given the form of Input, I would be almost taking extra steps to convert this into
+   JSON. In the future, when faced with a more complex situation, I'm sure that 
+   JSON will be my first choice.</br>
+</p>
+<p style="float: right">Josh Grillo</br></p>
+
+</div>
+
+</body>
+<html>

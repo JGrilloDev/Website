@@ -83,6 +83,7 @@ img.right{
   border-radius: 4%;
   border: 1px solid white;
   margin: 0px 5px 5px 15px;
+  width: 500px;
 }
 
 img.left{
@@ -90,6 +91,7 @@ img.left{
   border-radius: 4%;
   border: 1px solid white;
   margin: 0px 15px 5px 5px;
+  width: 500px;
 }
 
 div.entry{
@@ -101,7 +103,12 @@ div.entry h1{
   font-size: xx-large;
 }
 
-div.entry p{
+div.entry h2{
+  font-size: x-large;
+  padding-top: 60px;
+}
+
+div.entry p, ul{
   font-size: 21px;
 }
 
@@ -302,6 +309,10 @@ div.entry p{
   
   /*.content {padding-right: 0%};
   .content {padding-left: 0%};*/
+
+  img.right{
+    float: none;
+  }
 
   div.sideNav{
     visibility: hidden;
