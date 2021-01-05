@@ -4,6 +4,11 @@ html{
   scroll-behavior: smooth;
 }
 
+
+b.dramatic{
+  font-size: xx-large;
+}
+
 body.content{
   padding-right: 15%;
   padding-left: 15%;
@@ -26,6 +31,7 @@ div.titleBar{
 
 div.big{
   font-size: 300;
+  padding-bottom: 300px;
 }
 
 div.horizontalDivider{
@@ -75,7 +81,11 @@ div.sideNav a:hover{
 }
 
 div.spacer{
-  padding-top: 30px;
+  padding-top: 0px;
+}
+
+div.spacer2{
+  padding-top: 10px;
 }
 
 img.right{
@@ -99,8 +109,15 @@ div.entry{
 }
 
 div.entry h1{
+  padding-top: 50px;
   text-decoration: underline;
   font-size: xx-large;
+}
+
+div.entry h1.mega{
+  padding-top: 50px;
+  font-size: 40pt;
+  text-align: center;
 }
 
 div.entry h2{
@@ -112,10 +129,43 @@ div.entry p, ul{
   font-size: 21px;
 }
 
+div.entry li{
+  font-size: 21px;
+}
 
+a.report_button {
+  font-size: x-large;
+  background-color: #333333;
+  color: #eee;
+  text-decoration: none;
+  padding: 5px;
+  border: 3px solid #141414;
+  border-radius: 5px;
+}
 
+a.report_button:hover{
+  background-color: #444444;
+}
 
+div.entry br{
+  display: block;
+  content: "";
+  margin-top: 10px;
+}
 
+div.entry p.right{
+  text-align: right;
+}
+
+div.titlecard{
+  text-align: center;
+  font-size: x-large;
+}
+
+div.titlecard h1{
+  padding-top: 20px;
+  font-size: 25pt;
+}
 
 
 
@@ -311,6 +361,9 @@ div.entry p, ul{
   .content {padding-left: 0%};*/
 
   img.right{
+    float: none;
+  }
+  img.left{
     float: none;
   }
 

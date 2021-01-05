@@ -68,3 +68,34 @@
     });
   });
 })(jQuery);
+
+// FOR THE FANCY GIFS -- TEMPLATE
+$(document).ready(function() {
+  $("#PUT TAG HERE").hover( // name or tag of the gif thing
+    function() {
+      // animated gif
+      $(this).attr("src", "PUT GIF.gif HERE");
+    },
+    function() {
+      // static image
+      $(this).attr("src", "PUT IMG.png HERE");
+    }
+  );
+});
+// PUT THIS LINE IN HTML
+//<img id="PUT TAG HERE" src="PUT IMG.png HERE" />
+// PUT THIS LINE IN HTML
+
+// FOR THE FANCY GIFS -- TEST
+$(document).ready(function() {
+  $("#imgTest").hover( // name/tag of the gif thing
+    function() {
+      // animated gif
+      $(this).attr("src", "https://lh4.googleusercontent.com/i1RprwcvxhbN2TAMunNxS4RiNVT0DvlD9FNQCvPFuJ0=w140-h165-no");
+    },
+    function() {
+      // static image
+      $(this).attr("src", "https://lh4.googleusercontent.com/-gZiu96oTuu4/Uag5oWLQHfI/AAAAAAAABSE/pl1W8n91hH0/w140-h165-no/Homer-Static.png");
+    }
+  );
+});
